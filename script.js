@@ -60,12 +60,6 @@ class Calculator {
             this.topScreen.innerHTML = this.prevOperand;
         }
     }
-    log() {
-        console.log(this.prevOperand);
-        console.log(this.currOperand);
-        console.log(this.operation);
-
-    }
 }
 
 const delButton = document.querySelector('[data-delete]')
