@@ -21,9 +21,9 @@ class Calculator {
         if (this.prevOperand !== '') {
             this.compute()
         }
-        this.operation = ops;
         this.prevOperand = this.currOperand;
         this.currOperand = "";
+        this.operation = ops;
     }
 
     compute() {
@@ -51,25 +51,14 @@ class Calculator {
         this.prevOperand = "";
     }
     updateDisplay() { 
-        this.bottomScreen.innerText = this.currOperand;
+        this.bottomScreen.innerHTML = this.currOperand;
         if (this.operation !== undefined) {
-            this.topScreen.innerText = 
+            this.topScreen.innerHTML = 
             `${this.prevOperand} ${this.operation}`         
         }
-        else if (this.prevOperand === "" && this.currOperand === "") {
-            this.topScreen.innerText = "";
-            this.bottomScreen.innerText = "";
+        if (this.operation === undefined) {
+            this.topScreen.innerHTML = this.prevOperand;
         }
-        else if (this.operation === undefined) {
-            this.topScreen.innerText = this.prevOperand;
-        }
-       
-    }
-    log() {
-        console.log(this.prevOperand);
-        console.log(this.currOperand);
-        console.log(this.operation);
-
     }
 }
 
