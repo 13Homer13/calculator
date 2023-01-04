@@ -23,7 +23,7 @@ class Calculator {
         }
         this.operation = ops;
         this.prevOperand = this.currOperand;
-        calculator.currOperand = "";
+        this.currOperand = "";
     }
 
     compute() {
