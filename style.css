@@ -26,7 +26,8 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
 }
 .calculator-grid button:active {
-   transform: scale(0.95);
+
+    transform: scale(0.95);
 }
 .output {
     background-color: rgba(0, 0, 0, 0.8);
